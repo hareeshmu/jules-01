@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards Tracker - Rewards Tracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="cards.html">Cards</a></li>
+        <li><a href="rewards.html">Rewards</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Rewards Tracking</h1>
+        </header>
+        <main>
+            <section id="spendingFormSection">
+                <h2>Log New Spending</h2>
+                <form id="logSpendingForm">
+                    <div>
+                        <label for="selectCard">Choose a Card:</label>
+                        <select id="selectCard" name="cardId" required>
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    <div>
+                        <label for="spendingCategory">Spending Category:</label>
+                        <input type="text" id="spendingCategory" required>
+                    </div>
+                    <div>
+                        <label for="amountSpent">Amount Spent ($):</label>
+                        <input type="number" id="amountSpent" min="0.01" step="0.01" required>
+                    </div>
+                    <button type="submit">Log Spending</button>
+                </form>
+            </section>
+
+            <section id="balancesDisplaySection">
+                <h2>Reward Balances</h2>
+                <div id="rewardBalancesList">
+                    <!-- Reward balances will be dynamically rendered here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards Tracker - Card Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="cards.html">Cards</a></li>
+        <li><a href="rewards.html">Rewards</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Card Management</h1>
+        </header>
+        <main>
+            <section id="cardFormSection">
+                <h2>Add New Credit Card</h2>
+                <form id="addCardForm">
+                    <div>
+                        <label for="cardName">Card Name:</label>
+                        <input type="text" id="cardName" required>
+                    </div>
+                    <div>
+                        <label for="rewardsProgramSelect">Rewards Program:</label>
+                        <select id="rewardsProgramSelect" name="rewardsProgramSelect" required>
+                            <option value="">-- Select a Program --</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pointsBalance">Initial Points Balance:</label>
+                        <input type="number" id="pointsBalance" value="0" min="0">
+                    </div>
+                    <div>
+                        <label for="expirationDate">Expiration Date (MM/YYYY):</label>
+                        <input type="text" id="expirationDate" placeholder="MM/YYYY">
+                    </div>
+                    <button type="submit">Add Card</button>
+                </form>
+            </section>
+
+            <section id="cardsDisplaySection">
+                <h2>My Cards</h2>
+                <div id="cardsList">
+                    <!-- Cards will be dynamically rendered here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
